@@ -165,14 +165,6 @@ const processPartOne = (input: Input): number => {
 
 const processPartTwo = (input: Input): number => {
   const game = new Game(input);
-  console.log(game.rankedPlayers(true));
-  fs.writeFileSync(
-    path.join(__dirname, "output.txt"),
-    game
-      .rankedPlayers(true)
-      .map((p) => p.rawHand)
-      .join("\n")
-  );
   return game.totalWinnings(true);
 };
 
